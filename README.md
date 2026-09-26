@@ -17,11 +17,20 @@
 - **前端页面**: [http://localhost:3000](http://localhost:3000)
 - **后端 Swagger API 文档**: [http://localhost:8080/swagger-ui/index.html](http://localhost:8080/swagger-ui/index.html)
 
+## 🧭 项目结构检查
+本项目采用严格的前后端分离结构：后端代码只在 `novel-backend/`，前端代码只在 `novel-frontend/`，
+请勿把业务代码散落到仓库根目录。克隆代码或提交前请运行：
+```bash
+bash scripts/check-structure.sh
+```
+检查项、缺失/散落时的修复提示详见 [项目结构检查说明](./docs/structure-check.md)。
+
 ## 📁 项目文档 (Project Docs)
 详细的项目开发与运维文档已持久化至 `./docs` 目录：
 - [架构说明](./docs/architecture.md)
 - [设计文档](./docs/design.md)
 - [开发指南](./docs/development.md)
+- [项目结构检查说明](./docs/structure-check.md)
 - [测试报告](./docs/testing.md)
 - [用户手册](./docs/user_manual.md)
 - [演进历史](./docs/planning/walkthrough_zh.md)

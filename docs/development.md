@@ -45,8 +45,21 @@ npm run dev
 - **前端代理**: 在 `vite.config.js` 中配置了对 `/api` 的本地转发。
 - **Docker 镜像**: 后端使用 `eclipse-temurin:17-jre` 基础镜像，前端基于 `nginx:alpine`。
 
-## 5. 发布流程
+## 5. 项目结构检查
+本系统要求严格的前后端目录边界：后端代码只允许进入 `novel-backend/`，前端代码只允许进入
+`novel-frontend/`，根目录仅保留工程级文件，禁止把业务代码散落到根目录。
+
+克隆代码、调整目录或提交前，运行结构检查：
+```bash
+bash scripts/check-structure.sh
+```
+脚本会确认 `novel-backend/`、`novel-frontend/`、`novel-backend/pom.xml`、
+`novel-frontend/package.json`、`README.md` 等均在正确位置，并扫描根目录是否有游离的
+源码 / 描述符；发现问题时会以非零退出码退出并打印逐项修复提示。完整说明（含常见问题
+修复步骤与新增代码放置约定）见 [structure-check.md](./structure-check.md)。
+
+## 6. 发布流程
 1. 提交代码至仓库。
-2. 确保 `package-lock.json` 已更新。
-3. 运行 `docker compose up --build` 进行全量构建。
- Riverside, CA
+2. 运行 `bash scripts/check-structure.sh` 确认结构正确。
+3. 确保 `package-lock.json` 已更新。
+4. 运行 `docker compose up --build` 进行全量构建。
