@@ -22,6 +22,7 @@
 - [架构说明](./docs/architecture.md)
 - [设计文档](./docs/design.md)
 - [开发指南](./docs/development.md)
+- [项目结构检查](./docs/structure_check.md)
 - [测试报告](./docs/testing.md)
 - [用户手册](./docs/user_manual.md)
 - [演进历史](./docs/planning/walkthrough_zh.md)

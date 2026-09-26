@@ -24,6 +24,9 @@ novel-system/
 └── docker-compose.yml
 ```
 
+> **结构守护**: 后端代码只放 `novel-backend/`,前端代码只放 `novel-frontend/`,不得散落到根目录。
+> 克隆仓库后及提交代码前,请运行 `./scripts/check-structure.sh` 核对结构,详见 [项目结构检查说明](./structure_check.md)。
+
 ## 3. 本地开发启动
 
 ### 后端启动:
